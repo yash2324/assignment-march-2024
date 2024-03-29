@@ -1,9 +1,12 @@
+import Card from "./components/Card";
+import Heading from "./components/Heading";
+
 function App() {
   return (
-    <>
-      <div className="">Hello world</div>
-      <h1 className="text-6xl font-display">Test</h1>
-    </>
+    <div className="bg-bluish-very min-h-screen ">
+      <Heading />
+      <Card />
+    </div>
   );
 }
 
