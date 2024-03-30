@@ -80,7 +80,7 @@ const Card = () => {
               type="checkbox"
               onChange={() => setYearlyBill((prevBill) => !prevBill)}
             />
-            <span className="slider round"></span>
+            <span className="slider round hover:bg-cyan-soft"></span>
           </label>
           <div className="text-bluish-grayish text-sm">Yearly Billing</div>
           <div className="bg-reddish-grayish text-reddish-light rounded-full px-1.5 py-0.5 text-sm">
