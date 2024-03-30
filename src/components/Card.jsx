@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import check from "../assets/check.svg";
 import "../card.css";
+import { useDispatch, useSelector } from "react-redux";
+import { AddSliderValue, AddBilling } from "../utils/dataChanges";
 const Card = () => {
-  const [sliderValue, setSliderValue] = useState(50);
+  const dispatch = useDispatch();
+  const { sliderValue } = useSelector((state) => state.data);
   const [pageview, setPageView] = useState("100K");
   const [amount, setAmount] = useState(16);
-  const [yearlyBill, setYearlyBill] = useState(false);
+  const { monthlyBilling } = useSelector((state) => state.data);
 
   useEffect(() => {
     switch (sliderValue) {
@@ -60,7 +63,7 @@ const Card = () => {
               max="100"
               step="25"
               value={sliderValue}
-              onChange={(e) => setSliderValue(e.target.value)}
+              onChange={(e) => dispatch(AddSliderValue(e.target.value))}
               className="range-slider"
               style={{ background: sliderGradient }}
             />
@@ -68,7 +71,9 @@ const Card = () => {
 
           <div className="flex items-center justify-center mb-8 md:order-2 md:mb-0">
             <span className="text-4xl mr-2 font-bold text-bluish-dark">
-              {!yearlyBill ? `$${amount}.00` : `$${amount - 0.25 * amount}.00`}
+              {monthlyBilling
+                ? `$${amount}.00`
+                : `$${amount - 0.25 * amount}.00`}
             </span>
             <span className="text-sm text-bluish-grayish">/ month</span>
           </div>
@@ -78,7 +83,7 @@ const Card = () => {
           <label className="switch">
             <input
               type="checkbox"
-              onChange={() => setYearlyBill((prevBill) => !prevBill)}
+              onChange={() => dispatch(AddBilling(!monthlyBilling))}
             />
             <span className="slider round hover:bg-cyan-soft"></span>
           </label>
@@ -109,7 +114,7 @@ const Card = () => {
               <div className="text-bluish-grayish text-md">Email reports</div>
             </div>
           </div>
-          <button className="text-bluish-lightGrayish bg-bluish-dark px-12 py-3 rounded-full">
+          <button className="text-bluish-lightGrayish hover:text-cyan-white bg-bluish-dark px-12 py-3 rounded-full">
             Start my trial
           </button>
         </div>
