@@ -50,7 +50,7 @@ const Card = () => {
   const sliderGradient = calculateSliderGradient();
   return (
     <div className="flex justify-center font-display ">
-      <div className="relative -top-24 bg-cyan-white dark:bg-gray-600 flex flex-col items-center w-10/12 py-8 rounded-2xl shadow-2xl md:w-7/12 lg:w-[40%]">
+      <div className="relative -top-20 md:-top-24 bg-cyan-white dark:bg-gray-600 flex flex-col items-center w-10/12 py-8 rounded-2xl shadow-2xl md:w-7/12 lg:w-[40%]">
         <div className="w-full px-4 md:flex md:justify-between md:flex-wrap md:px-9 md:items-center">
           <div className="text-bluish-grayish dark:text-gray-300 tracking-widest mb-12 text-center md:mb-0">
             {pageview} PAGEVIEWS
@@ -80,11 +80,11 @@ const Card = () => {
             </span>
           </div>
         </div>
-        <div className=" relative flex justify-center items-center w-full mx-auto  mb-10 pl-10 md:pl-12 gap-2 sm:gap-6 ">
+        <div className=" relative flex items-center justify-around w-full mx-auto  mb-10 pl-0 md:pl-12 gap-2 sm:gap-6 ">
           <div className="text-sm text-bluish-grayish pl-10 dark:text-gray-300">
             Monthly Billing
           </div>
-          <label className="switch">
+          <label className="switch min-w-[50px]">
             <input
               type="checkbox"
               onChange={() => dispatch(AddBilling(!monthlyBilling))}
@@ -94,7 +94,7 @@ const Card = () => {
           <div className="text-bluish-grayish dark:text-gray-300 text-sm">
             Yearly Billing
           </div>
-          <div className="bg-reddish-grayish text-reddish-light rounded-full px-3 mr-2 text-center  lg:px-1.5 py-0.5 text-sm">
+          <div className="bg-reddish-grayish text-reddish-light rounded-full px-3  text-center mr-2 lg:mr-5  lg:px-1.5 py-0.5 lg:py-1.5 text-sm">
             25% discount
           </div>
         </div>
@@ -122,7 +122,7 @@ const Card = () => {
               </div>
             </div>
           </div>
-          <button className="text-bluish-lightGrayish dark:text-white dark:hover:text-gray-400 hover:text-cyan-white bg-bluish-dark px-12 py-3 rounded-full">
+          <button className="text-bluish-lightGrayish  dark:text-white dark:hover:text-gray-400 hover:text-cyan-white bg-bluish-dark px-12 py-3 rounded-full ">
             Start my trial
           </button>
         </div>
