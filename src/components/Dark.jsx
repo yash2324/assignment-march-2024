@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { ChangeMode } from "../utils/darkMode";
 
 const Dark = () => {
+  const dispatch = useDispatch();
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
+      dispatch(ChangeMode("dark"));
     } else {
       document.documentElement.classList.remove("dark");
+      dispatch(ChangeMode("light"));
     }
   }, [theme]);
 
