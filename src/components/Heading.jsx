@@ -1,7 +1,7 @@
 import React from "react";
 import bg from "../assets/bg.svg";
 import circles from "../assets/circlesPattern.svg";
-import Dark from "./darkMode/Dark";
+import Dark from "./Dark";
 
 const Heading = () => {
   return (
