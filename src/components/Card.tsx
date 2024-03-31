@@ -94,8 +94,11 @@ const Card = () => {
           <div className="text-bluish-grayish dark:text-gray-300 text-sm">
             Yearly Billing
           </div>
-          <div className="bg-reddish-grayish text-reddish-light rounded-full px-3  text-center mr-2 lg:mr-5  lg:px-1.5 py-0.5 lg:py-1.5 text-sm">
+          <div className="bg-reddish-grayish text-reddish-light rounded-full hidden text-center lg:block lg:mr-5  lg:px-1.5 py-0.5 lg:py-1.5 text-sm">
             25% discount
+          </div>
+          <div className="bg-reddish-grayish text-reddish-light rounded-full px-3  text-center mr-7 lg:hidden py-0.5  text-sm">
+            -25%
           </div>
         </div>
         <hr className=" w-full dark:border-gray-200"></hr>
