@@ -4,7 +4,7 @@ import darkReducer from "./darkMode";
 const appStore = configureStore({
   reducer: {
     data: dataReducer,
-    dark: darkReducer,
+    theme: darkReducer,
   },
 });
 export default appStore;
