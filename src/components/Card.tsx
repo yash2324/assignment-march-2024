@@ -98,8 +98,7 @@ const Card = () => {
             25% discount
           </div>
         </div>
-
-        <hr className="border border-bluish-lightGrayish dark:border-gray-200  w-full" />
+        <hr className=" w-full dark:border-gray-200"></hr>
 
         <div className="flex flex-col font-semibold items-center mt-6 md:flex-row md:justify-between md:w-full md:px-9">
           <div className="flex flex-col items-center md:items-start">
