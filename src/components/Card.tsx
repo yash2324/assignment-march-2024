@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import check from "../assets/check.svg";
 import "../card.css";
-import { useDispatch, useSelector } from "react-redux";
 import { AddSliderValue, AddBilling } from "../utils/dataChanges";
+import { useAppDispatch, useAppSelector } from "../utils/hooks";
 const Card = () => {
-  const dispatch = useDispatch();
-  const { sliderValue } = useSelector((state: any) => state.data);
+  const dispatch = useAppDispatch();
+  const { sliderValue } = useAppSelector((state) => state.data);
   const [pageview, setPageView] = useState("100K");
   const [amount, setAmount] = useState(16);
-  const { monthlyBilling } = useSelector((state: any) => state.data);
+  const { monthlyBilling } = useAppSelector((state: any) => state.data);
 
   useEffect(() => {
     switch (sliderValue) {
@@ -43,7 +43,7 @@ const Card = () => {
   }, [sliderValue]);
 
   const calculateSliderGradient = () => {
-    const percentage = (sliderValue / 100) * 100;
+    const percentage = (Number(sliderValue) / 100) * 100;
     return `linear-gradient(to right, hsl(174, 86%, 45%) ${percentage}%, hsl(224, 65%, 95%) 0% , hsl(224, 65%, 95%) 100%)`;
   };
 
