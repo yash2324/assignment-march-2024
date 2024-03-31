@@ -11,7 +11,7 @@ const Heading = () => {
         <div className="header relative flex flex-col items-center h-96 mb-6 ">
           <img
             src={bg}
-            className="bg-img absolute min-h-[100%] md:min-h-auto min-w-[100%] filter-none dark:filter brightness-50 invert-[5%] contrast-100"
+            className="bg-img absolute min-h-[100%] md:min-h-auto min-w-[100%] filter-none dark:filter sepia-[25%] brightness-100 invert-[80%] contrast-10"
           />
 
           <img
