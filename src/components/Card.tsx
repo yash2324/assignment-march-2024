@@ -80,8 +80,8 @@ const Card = () => {
             </span>
           </div>
         </div>
-        <div className=" relative flex justify-center items-center w-full mb-10 pl-12 gap-2 sm:gap-6 ">
-          <div className="text-sm text-bluish-grayish dark:text-gray-300">
+        <div className=" relative flex justify-center items-center w-full mx-auto  mb-10 pl-10 md:pl-12 gap-2 sm:gap-6 ">
+          <div className="text-sm text-bluish-grayish pl-10 dark:text-gray-300">
             Monthly Billing
           </div>
           <label className="switch">
@@ -94,7 +94,7 @@ const Card = () => {
           <div className="text-bluish-grayish dark:text-gray-300 text-sm">
             Yearly Billing
           </div>
-          <div className="bg-reddish-grayish text-reddish-light rounded-full px-1.5 py-0.5 text-sm">
+          <div className="bg-reddish-grayish text-reddish-light rounded-full px-3 mr-2 text-center  lg:px-1.5 py-0.5 text-sm">
             25% discount
           </div>
         </div>

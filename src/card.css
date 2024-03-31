@@ -20,8 +20,8 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0px 18px 18px hsl(174, 77%, 80%);
-  transition: box-shadow 2s ease;
+  box-shadow: 0px 10px 12px hsl(174, 77%, 80%);
+  transition: box-shadow 1s ease;
 }
 .slider {
   position: absolute;
@@ -52,7 +52,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(32px);
 }
 
 .slider.round {
@@ -66,7 +66,7 @@ input:checked + .slider:before {
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
+  width: 70px;
   height: 26px;
 }
 
