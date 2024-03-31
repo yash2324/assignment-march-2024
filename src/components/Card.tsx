@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import check from "../assets/check.svg";
 import "../card.css";
 import { useDispatch, useSelector } from "react-redux";
 import { AddSliderValue, AddBilling } from "../utils/dataChanges";
 const Card = () => {
   const dispatch = useDispatch();
-  const { sliderValue } = useSelector((state) => state.data);
+  const { sliderValue } = useSelector((state: any) => state.data);
   const [pageview, setPageView] = useState("100K");
   const [amount, setAmount] = useState(16);
-  const { monthlyBilling } = useSelector((state) => state.data);
+  const { monthlyBilling } = useSelector((state: any) => state.data);
 
   useEffect(() => {
     switch (sliderValue) {
@@ -104,19 +104,19 @@ const Card = () => {
         <div className="flex flex-col font-semibold items-center mt-6 md:flex-row md:justify-between md:w-full md:px-9">
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center gap-2 mb-2">
-              <img src={check} className="size-4" alt="icon-check" />
+              <img src={check.toString()} className="size-4" alt="icon-check" />
               <div className="text-bluish-grayish dark:text-gray-300 text-md">
                 Unlimited Websites
               </div>
             </div>
             <div className="flex items-center gap-2 mb-2">
-              <img src={check} className="size-4" alt="icon-check" />
+              <img src={check.toString()} className="size-4" alt="icon-check" />
               <div className="text-bluish-grayish dark:text-gray-300 text-md">
                 100% data ownership
               </div>
             </div>
             <div className="flex items-center gap-2 mb-8">
-              <img src={check} className="size-4" alt="icon-check" />
+              <img src={check.toString()} className="size-4" alt="icon-check" />
               <div className="text-bluish-grayish dark:text-gray-300 text-md">
                 Email reports
               </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import bg from "../assets/bg.svg";
 import circles from "../assets/circlesPattern.svg";
 import Dark from "./Dark";
@@ -10,14 +9,14 @@ const Heading = () => {
       <div className="text-center ">
         <div className="header relative flex flex-col items-center h-96 mb-6 ">
           <img
-            src={bg}
+            src={bg.toString()}
             className="bg-img absolute min-h-[100%] md:min-h-auto min-w-[100%] filter-none dark:filter sepia-[25%] brightness-100 invert-[80%] contrast-10"
           />
 
           <img
-            src={circles}
+            src={circles.toString()}
             alt="pattern-circles"
-            className="absolute top-16 w-[30%] md:w-[15%] filter-none dark:filter invert-[10%] contrast-50"
+            className="absolute top-20 lg:top-16 w-[35%] md:w-[20%] lg:w-[15%] filter-none dark:filter invert-[10%] contrast-50"
           />
 
           <h2 className="font-display z-10 pt-32 md:pt-28 text-bluish-dark dark:text-bluish-very mb-4 font-extrabold text-[40px]">
